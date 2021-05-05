@@ -8,8 +8,8 @@ export const Hamburger = ({fnOpenSideBar}) => {
     <div
       className='h-full flex-grow flex items-center'
       onClick={fnOpenSideBar}>
-      <MenuAlt2Icon className='h-3/4 w-auto ' />
       <SearchIcon className='h-3/4 w-auto px-2' />
+      <MenuAlt2Icon className='h-3/4 w-auto ' />
     </div>
   );
 };

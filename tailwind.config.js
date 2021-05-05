@@ -5,23 +5,50 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      Roboto: ["Roboto", "sans-serif"],
+      Rajdhani: ["Rajdhani", "serif"],
+      Mansalva: ["Mansalva", "cursive"],
+    },
+
     extend: {
       screens: {
-        sm: {min: "360px", max: "600px"},
-        md: {min: "600px", max: "1224px"},
+        sm: {min: "360px", max: "740px"},
+        md: {min: "600px", max: "980px"},
         xl: "1224px",
       },
       gridTemplateRows: {
         layout: "auto 1fr auto",
       },
       gridTemplateColumns: {
+        default: "auto 1fr auto",
         xl: "repeat(10,1fr)",
         md: "repeat(6,1fr)",
-        sm: "1fr",
+        sm: "10px 1fr 10px",
+        aside: "10px 1fr 10px",
       },
       backgroundImage: (theme) => ({
         logo: "url('/logo.png')",
       }),
+      backgroundColor: (theme) => ({
+        gold: "#ff9500",
+        pink: "#ff0a54",
+        red: "#e5383b",
+      }),
+      borderColor: (theme) => ({
+        gold: "#ff9500",
+        pink: "#ff0a54",
+        red: "#e5383b",
+      }),
+      colors: {
+        gold: "#ff9500",
+        pink: "#ff0a54",
+        red: "#e5383b",
+      },
+      spacing: {
+        lg: "32rem",
+        xl: "36rem",
+      },
     },
   },
   variants: {

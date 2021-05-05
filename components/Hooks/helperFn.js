@@ -6,8 +6,7 @@ import {
 } from "react";
 
 export const CheckResize = () => {
-  const [isMobile, setMobile] =
-    useState < boolean > false;
+  const [isMobile, setMobile] = useState < boolean > false;
   const clearRef = useRef(null);
 
   const resizeHandler = useCallback(async () => {
@@ -30,18 +29,37 @@ export const CheckResize = () => {
 
   useEffect(() => {
     if (typeof window.innerWidth !== undefined) {
-      window.addEventListener(
-        "resize",
-        resizeHandler
-      );
+      window.addEventListener("resize", resizeHandler);
     }
 
-    () =>
-      removeEventListener(
-        "resize",
-        resizeHandler
-      );
+    () => removeEventListener("resize", resizeHandler);
   }, []);
 
   return isMobile;
+};
+
+export const IsInViewport = ({
+  elementRef,
+  options = {threshold: 1},
+}) => {
+  const [visible, setVisible] = useState(false);
+
+  const cb = useCallback(
+    ([entry]) => {
+      setVisible(() => entry.isIntersecting);
+    },
+    [visible, setVisible]
+  );
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(cb, options);
+
+    if (elementRef.current !== undefined) {
+      observer.observe(elementRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  return visible;
 };

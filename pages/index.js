@@ -2,6 +2,11 @@ import Head from "next/head";
 import Image from "next/image";
 import {MainWrapperDiv} from "./../components/MainResponsive/MainWrapperBox";
 import {HeaderMain} from "./../components/Header/HeaderMain";
+import Card1 from "./../components/Cards/Card1";
+import {Card2} from "./../components/Cards/Card2";
+import {Card3} from "./../components/Cards/Card3";
+import {CardProduct} from "./../components/Cards/CardProduct";
+import {CardVideo} from "../components/Cards/CardVideo";
 
 export default function Home() {
   return (
@@ -15,13 +20,68 @@ export default function Home() {
         <meta
           name='viewport'
           content='width=device-width, initial-scale=1.0'></meta>
+        <link
+          rel='preconnect'
+          href='https://fonts.gstatic.com'
+        />
+        <link
+          href='https://fonts.googleapis.com/css2?family=Mansalva&family=Rajdhani:wght@600&family=Roboto&display=swap'
+          rel='stylesheet'
+        />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <div className='row-start-1 sm:col-start-1 sm:col-end-2 md:col-start-2 md:col-end-6 xl:col-start-2 xl:col-span-8 h-auto bg-red-200'>
+      <div className='justify-self-center row-start-1 col-start-2 col-end-3 sm:w-full md:w-11/12 h-auto mb-4 bg-gray-100'>
         <HeaderMain />
       </div>
-      <div className='row-start-2 sm:col-start-1 sm:col-end-2 md:col-start-1 md:col-span-6 xl:col-span-12 h-96 bg-red-200'></div>
-      <div className='row-start-3 sm:col-start-1 sm:col-end-2 md:col-start-2 md:col-end-6 xl:col-start-2 xl:col-span-8 h-96 bg-red-200'></div>
+      <div className='justify-self-center row-start-2 col-start-2 col-end-3 sm:w-full md:w-xl h-auto bg-gray-100'>
+        <Card1
+          article_base='bg-gold flex flex-wrap mb-4 max-w-xl'
+          div_img_wrapper='w-11/12'
+          link_url='#'
+          inner_default='w-11/12'
+          text_size='text-2xl'
+          text='SUMMER VIBES'
+        />
+        <Card1
+          article_base='bg-gold flex flex-wrap mb-4 max-w-xl'
+          div_img_wrapper='w-11/12'
+          link_url='#'
+          inner_default='w-11/12'
+          text_size='text-2xl'
+          text='SUMMER VIBES'
+        />
+        <Card1
+          article_base='bg-gold flex flex-wrap mb-4 max-w-xl'
+          div_img_wrapper='w-11/12'
+          link_url='#'
+          inner_default='w-11/12'
+          text_size='text-2xl'
+          text='SUMMER VIBES'
+        />
+        <Card2
+          article_base='w-full relative mb-4 max-w-xl'
+          text_wrapper='absolute bottom-40 w-full flex flex-wrap justify-center'
+          text_title='NEW COLLECTION ARRIVED'
+          text_bg='bg-pink'
+          text_color='text-gray-100'
+          text_font='font-Roboto'
+          text_default='py-2 px-2 font-bold text-2xl tracking-wider'
+        />
+        <Card3
+          article_base='w-full relative mb-4'
+          text_wrapper='absolute bottom-2 w-full flex flex-wrap justify-center'
+          text_title='NEW STUFF'
+          text_border='border-4 border-pink'
+          text_color='text-gray-50'
+          text_font='font-Roboto'
+          text_default='py-2 px-2 font-bold text-2xl tracking-wider'
+        />
+        <CardProduct box_style='bg-gold w-full mb-4' />
+        <CardVideo />
+      </div>
+      <div className='row-start-3 sm:col-start-1 sm:col-end-2 md:col-start-2 md:col-end-6 xl:col-start-2 xl:col-span-8 h-96 bg-gray-100'>
+        <div>FOOTER</div>
+      </div>
     </MainWrapperDiv>
   );
 }

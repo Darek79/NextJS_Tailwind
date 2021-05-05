@@ -15,12 +15,12 @@ export default function SidebarItem({
   ],
 }) {
   return (
-    <div className='grid grid-cols-2 gap-4 h-auto my-8'>
+    <div className='grid grid-cols-2 gap-x-4 gap-y-2 h-auto my-8'>
       {categories.map((el) => {
         return (
           <Link key={el} href='#'>
-            <section className='w-full'>
-              <div className='w-full'>
+            <section className='w-full flex flex-col items-center'>
+              <div>
                 <Image
                   alt='Picture of the author'
                   width={250}
