@@ -6,6 +6,7 @@
 .pnp.js
 *.mov
 *.mp4
+*.jpg
 
 
 # testing

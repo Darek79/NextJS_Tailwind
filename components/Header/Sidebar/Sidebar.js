@@ -7,9 +7,11 @@ export const Aside = ({
   bg = "bg-gray-100",
   transform = "transition-all duration-350 transform-gpu translate-x-0",
   transformChg = "transition-all duration-350 transform-gpu -translate-x-full",
+  nodeRef
 }) => {
   return (
     <aside
+    ref={nodeRef}
       className={
         openAside
           ? [base, bg, transform, transform].join(" ")

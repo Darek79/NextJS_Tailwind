@@ -2,11 +2,12 @@ import Link from "next/link";
 import Image from "next/image";
 import {Button} from "./../Elements/Button";
 
-export const CardProduct = ({
+export const CardProduct2 = ({
   link_url = "#",
   article_base = "mb-4 bg-pink",
   outer_default,
-  inner_default = "w-11/12",
+  width_default = "w-full",
+  img_src,
   text_wrapper = "flex justify-between",
   text_title = "PRODUCT TITLE",
   text_price = "22 €",
@@ -19,16 +20,17 @@ export const CardProduct = ({
     <Link href={link_url}>
       <article
         className={[article_base, outer_default].join(" ")}>
-        <div className={[inner_default].join(" ")}>
+        <div className={[width_default].join(" ")}>
           <Image
             alt='Picture of the author'
-            src='/f1.jpg'
-            width={500}
-            height={700}
+            layout='responsive'
+            width={400}
+            height={650}
+            src='/f2.jpg'
           />
         </div>
         <div
-          className={[text_wrapper, inner_default].join(
+          className={[width_default, text_wrapper].join(
             " "
           )}>
           <p
@@ -60,4 +62,3 @@ export const CardProduct = ({
     </Link>
   );
 };
-// src='https://via.placeholder.com/500x600/996600'

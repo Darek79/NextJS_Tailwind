@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 
-
 export const Card2 = ({
   link_url = "#",
   article_base,
@@ -21,9 +20,9 @@ export const Card2 = ({
         <Image
           alt='Picture of the author'
           layout='responsive'
-          width={500}
+          width={400}
           height={600}
-          src='https://via.placeholder.com/500x600/996600'
+          src='/f4.jpg'
         />
         <div
           className={[text_wrapper, inner_default].join(
@@ -43,3 +42,4 @@ export const Card2 = ({
     </Link>
   );
 };
+// src='https://via.placeholder.com/500x600/996600'

@@ -14,7 +14,7 @@ const Card1 = ({
   text_style_base = "font-Roboto font-bold tracking-wider py-2",
   text_style_color = "text-gray-50",
   text_size,
-  img_url = "https://via.placeholder.com/500x600/996600",
+  img_url = "/f3.jpg",
 }) => {
   return (
     <Link href={link_url}>
@@ -51,3 +51,5 @@ const Card1 = ({
 };
 
 export default Card1;
+
+// img_url = "https://via.placeholder.com/500x600/996600",

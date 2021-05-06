@@ -1,6 +1,6 @@
 import IsInViewport from "./../Hooks/IsonScreen";
 
-export const CardVideo = () => {
+export const CardVideo = ({video_default}) => {
   const [isVisible, nodeRef] = IsInViewport({
     threshold: 0.5,
   });
@@ -19,12 +19,12 @@ export const CardVideo = () => {
     <>
       {isVisible ? play() : pause()}
       <video
-        className='h-96 w-full'
+        className={[video_default].join(" ")}
         autoPlay={true}
         loop={true}
         muted={true}
         ref={nodeRef}>
-        <source src='/ocean.mp4' type='video/mp4' />
+        <source src='/couple.mp4' type='video/mp4' />
       </video>
     </>
   );

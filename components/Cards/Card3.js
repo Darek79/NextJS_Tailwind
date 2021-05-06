@@ -10,7 +10,7 @@ export const Card3 = ({
   text_wrapper,
   text_title = "NEW STUFF",
   text_bg,
-  text_border = "border-4 border-pink",
+  text_border,
   text_color = "text-gray-50",
   text_font = "font-Roboto",
   text_default = "py-2 px-2 font-bold text-2xl tracking-wider",
@@ -23,8 +23,8 @@ export const Card3 = ({
           alt='Picture of the author'
           layout='responsive'
           width={500}
-          height={250}
-          src='https://via.placeholder.com/500x250/996600'
+          height={300}
+          src='/fg1.jpg'
         />
         <div
           className={[text_wrapper, inner_default].join(
@@ -32,6 +32,7 @@ export const Card3 = ({
           )}>
           <span
             className={[
+              text_bg,
               text_border,
               text_color,
               text_font,
@@ -44,3 +45,4 @@ export const Card3 = ({
     </Link>
   );
 };
+// src='https://via.placeholder.com/500x250/996600'

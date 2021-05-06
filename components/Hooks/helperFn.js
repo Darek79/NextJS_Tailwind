@@ -5,13 +5,13 @@ import {
   useRef,
 } from "react";
 
-export const CheckResize = () => {
-  const [isMobile, setMobile] = useState < boolean > false;
+export const CheckResize = (smallerThen) => {
+  const [isMobile, setMobile] = useState(false);
   const clearRef = useRef(null);
 
   const resizeHandler = useCallback(async () => {
     const w = await promiseHandler();
-    if (w < 600) {
+    if (w < smallerThen) {
       console.log(w);
       setMobile((p) => !p);
     } else {

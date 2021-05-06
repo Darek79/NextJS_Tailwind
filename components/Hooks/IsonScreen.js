@@ -1,4 +1,9 @@
-import {useState, useEffect, useRef} from "react";
+import {
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+} from "react";
 
 function IsOnScreen(options) {
   const [isVisible, setVisible] = useState(false);

@@ -15,14 +15,14 @@ module.exports = {
       screens: {
         sm: {min: "360px", max: "740px"},
         md: {min: "600px", max: "980px"},
-        xl: "1224px",
+        xl: "981px",
       },
       gridTemplateRows: {
         layout: "auto 1fr auto",
       },
       gridTemplateColumns: {
         default: "auto 1fr auto",
-        xl: "repeat(10,1fr)",
+        xl: "50px 1fr 50px",
         md: "repeat(6,1fr)",
         sm: "10px 1fr 10px",
         aside: "10px 1fr 10px",
