@@ -17,27 +17,20 @@ export const Card3 = ({
 }) => {
   return (
     <Link href={link_url}>
-      <article
-        className={[article_base, outer_default].join(" ")}>
+      <article className='card3_article_base'>
         <Image
           alt='Picture of the author'
           layout='responsive'
           width={500}
           height={300}
-          src='/fg1.jpg'
+          src='/fg1.webp'
         />
-        <div
-          className={[text_wrapper, inner_default].join(
-            " "
-          )}>
+        <div className='card3_text_wrapper'>
           <span
-            className={[
-              text_bg,
-              text_border,
-              text_color,
-              text_font,
-              text_default,
-            ].join(" ")}>
+            className='card3_text_border
+            card3_text_color
+            card3_text_font
+            card3_text_default'>
             {text_title}
           </span>
         </div>

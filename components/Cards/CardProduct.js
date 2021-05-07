@@ -4,56 +4,36 @@ import {Button} from "./../Elements/Button";
 
 export const CardProduct = ({
   link_url = "#",
-  article_base = "mb-4 bg-pink",
-  outer_default,
-  inner_default = "w-11/12",
-  text_wrapper = "flex justify-between",
   text_title = "PRODUCT TITLE",
-  text_price = "22 €",
-  text_category = "SHOES",
-  text_style_base = "font-Roboto  font-bold tracking-wider px-4 py-2",
-  text_size,
-  text_style_color = "text-gray-50",
+  text_price,
+  text_category,
 }) => {
   return (
     <Link href={link_url}>
-      <article
-        className={[article_base, outer_default].join(" ")}>
-        <div className={[inner_default].join(" ")}>
+      <article className='cardProduct_article_base'>
+        <div className='cardProduct_inner_default'>
           <Image
             alt='Picture of the author'
-            src='/f1.jpg'
+            src='/f6.webp'
             width={500}
             height={700}
           />
         </div>
-        <div
-          className={[text_wrapper, inner_default].join(
-            " "
-          )}>
+        <div className='cardProduct_text_wrapper'>
           <p
-            className={[
-              text_style_base,
-              text_style_color,
-              text_size,
-            ].join(" ")}>
+            className='cardProduct_text_style_base
+            cardProduct_text_style'>
             {text_title}
           </p>
           <p
-            className={[
-              text_style_base,
-              text_style_color,
-              text_size,
-            ].join(" ")}>
+            className='cardProduct_text_style_base
+            cardProduct_text_style'>
             {text_price}
           </p>
         </div>
         <p
-          className={[
-            text_style_base,
-            text_style_color,
-            text_size,
-          ].join(" ")}>
+          className='cardProduct_text_style_base
+          cardProduct_text_style'>
           {text_category}
         </p>
       </article>

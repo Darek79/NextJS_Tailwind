@@ -15,26 +15,22 @@ export const Card2 = ({
 }) => {
   return (
     <Link href={link_url}>
-      <article
-        className={[article_base, outer_default].join(" ")}>
+      <article className='card2_article_base'>
         <Image
           alt='Picture of the author'
           layout='responsive'
           width={400}
           height={600}
-          src='/f4.jpg'
+          src='/f4.webp'
         />
-        <div
-          className={[text_wrapper, inner_default].join(
-            " "
-          )}>
+        <div className='card2_text_wrapper'>
           <span
-            className={[
-              text_bg,
-              text_color,
-              text_font,
-              text_default,
-            ].join(" ")}>
+            className='
+            card2_text_bg
+            card2_text_color
+            card2_text_font
+            card2_text_default
+            '>
             {text_title}
           </span>
         </div>

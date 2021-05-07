@@ -5,25 +5,13 @@ import PropTypes from "prop-types";
 
 const Card1 = ({
   link_url = "#",
-  article_base,
-  outer_default,
-  inner_default,
-  div_img_wrapper,
-  text_wrapper = "flex justify-center",
   text = "SUMMER VIBES",
-  text_style_base = "font-Roboto font-bold tracking-wider py-2",
-  text_style_color = "text-gray-50",
-  text_size,
-  img_url = "/f3.jpg",
+  img_url = "/f3.webp",
 }) => {
   return (
     <Link href={link_url}>
-      <article
-        className={[article_base, outer_default].join(" ")}>
-        <div
-          className={[div_img_wrapper, inner_default].join(
-            " "
-          )}>
+      <article className='card1_default'>
+        <div className='card1_div_img_wrapper_default'>
           <Image
             alt='my test img'
             layout='responsive'
@@ -32,16 +20,11 @@ const Card1 = ({
             src={img_url}
           />
         </div>
-        <div
-          className={[text_wrapper, inner_default].join(
-            " "
-          )}>
+        <div className='card1_text_wrapper_default'>
           <p
-            className={[
-              text_style_base,
-              text_style_color,
-              text_size,
-            ].join(" ")}>
+            className='card1_text_style_base
+            card1_text_style_color
+            card1_text_size'>
             {text}
           </p>
         </div>

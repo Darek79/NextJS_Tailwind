@@ -1,16 +1,138 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+/* prettier-ignore */
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+
+/* -------------------------------------------------------------------------- */
+/*                                HEADER STYLE                                */
+/* -------------------------------------------------------------------------- */
+
+.header_default_div {
+  @apply justify-self-center row-start-1 col-start-2 col-end-3 sm:w-full md:w-11/12 xl:w-full h-auto mb-4 bg-gray-100;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+/* -------------------------------------------------------------------------- */
+/*                                 MAIN STYLE                                 */
+/* -------------------------------------------------------------------------- */
+
+.main_default_style {
+  @apply justify-self-center row-start-2 col-start-2 col-end-3 sm:w-full md:w-xl xl:w-4/5 h-auto bg-gray-100;
 }
 
-* {
-  box-sizing: border-box;
+/* -------------------------------------------------------------------------- */
+/*                                   FOOTER                                   */
+/* -------------------------------------------------------------------------- */
+
+.footer_default {
+  @apply row-start-3 sm:col-start-1 sm:col-end-2 md:col-start-2 md:col-end-6 xl:col-start-2 xl:col-span-8 h-96 bg-gray-100;
 }
+
+/* -------------------------------------------------------------------------- */
+/*                                CARD1 STYLING                               */
+/* -------------------------------------------------------------------------- */
+
+.card1_default {
+  @apply bg-gold flex flex-wrap mb-4 max-w-xl;
+}
+.card1_div_img_wrapper_default {
+  @apply w-11/12;
+}
+.card1_text_wrapper_default {
+  @apply flex justify-center;
+}
+.card1_text_style_base {
+  @apply font-Roboto font-bold tracking-wider p-2;
+}
+.card1_text_style_color {
+  @apply text-gray-50;
+}
+.card1_text_size {
+  @apply text-2xl;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                CARD2 STYLING                               */
+/* -------------------------------------------------------------------------- */
+.card2_article_base {
+  @apply w-full relative mb-4 max-w-xl;
+}
+.card2_text_wrapper {
+  @apply absolute bottom-40 w-full flex flex-wrap justify-center;
+}
+.card2_text_bg {
+  @apply bg-pink;
+}
+.card2_text_color {
+  @apply text-gray-100;
+}
+.card2_text_font {
+  @apply font-Roboto;
+}
+.card2_text_default {
+  @apply py-2 px-2 font-bold text-2xl tracking-wider;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 CARD3 STYLE                                */
+/* -------------------------------------------------------------------------- */
+
+.card3_article_base {
+  @apply w-full relative mb-4;
+}
+.card3_text_wrapper {
+  @apply absolute bottom-2 w-full flex flex-wrap justify-center;
+}
+.card3_text_border {
+  @apply border-4 border-pink;
+}
+.card3_text_color {
+  @apply text-gray-50;
+}
+.card3_text_font {
+  @apply font-Roboto;
+}
+.card3_text_default {
+  @apply py-2 px-2 font-bold text-2xl tracking-wider;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              CARDPRODUCT STYLE                             */
+/* -------------------------------------------------------------------------- */
+
+.cardProduct_article_base {
+  @apply mb-4 bg-pink;
+}
+.cardProduct_inner_default {
+  @apply w-11/12;
+}
+.cardProduct_text_wrapper {
+  @apply flex justify-between w-11/12;
+}
+.cardProduct_text_style_base {
+  @apply font-Roboto  font-bold tracking-wider px-4 py-2;
+}
+.cardProduct_text_style {
+  @apply text-gray-50;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              CARDPRODUCT STYLE2                             */
+/* -------------------------------------------------------------------------- */
+
+.cardProduct2_article_base {
+  @apply mb-4 bg-pink;
+}
+.cardProduct2_inner_default {
+  @apply w-11/12;
+}
+.cardProduct2_text_wrapper {
+  @apply flex justify-between w-full;
+}
+.cardProduct2_text_style_base {
+  @apply font-Roboto  font-bold tracking-wider px-4 py-2 text-base;
+}
+.cardProduct2_text_style {
+  @apply text-gray-50;
+}
+
+@import "tailwindcss/utilities";

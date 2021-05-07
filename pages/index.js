@@ -2,13 +2,15 @@ import Head from "next/head";
 import Image from "next/image";
 import {MainWrapperDiv} from "./../components/MainResponsive/MainWrapperBox";
 import {HeaderMain} from "./../components/Header/HeaderMain";
+import Header from "../components/Elements/GridItem";
+import Main from "../components/Elements/GridItem";
+import Footer from "../components/Elements/GridItem";
 import Card1 from "./../components/Cards/Card1";
 import {Card2} from "./../components/Cards/Card2";
 import {Card3} from "./../components/Cards/Card3";
 import {CardProduct} from "./../components/Cards/CardProduct";
 import {CardProduct2} from "./../components/Cards/CardProduct2";
 import {CardVideo} from "../components/Cards/CardVideo";
-
 
 export default function Home() {
   return (
@@ -32,86 +34,50 @@ export default function Home() {
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      <div className='justify-self-center row-start-1 col-start-2 col-end-3 sm:w-full md:w-11/12 xl:w-full h-auto mb-4 bg-gray-100'>
+      <Header classes='header_default_div'>
         <HeaderMain />
-      </div>
-      <div className='justify-self-center row-start-2 col-start-2 col-end-3 sm:w-full md:w-xl xl:w-4/5 h-auto bg-gray-100'>
+      </Header>
+      <Main classes='main_default_style'>
         {/* <CardVideo video_default='w-full mb-4' /> */}
-
-        <Card1
-          article_base='bg-gold flex flex-wrap mb-4 max-w-xl'
-          div_img_wrapper='w-11/12'
-          link_url='#'
-          inner_default='w-11/12'
-          text_size='text-2xl'
-          text='SUMMER VIBES'
-        />
-        <Card1
-          article_base='bg-gold flex flex-wrap mb-4 max-w-xl'
-          div_img_wrapper='w-11/12'
-          link_url='#'
-          inner_default='w-11/12'
-          text_size='text-2xl'
-          text='SUMMER VIBES'
-        />
+        <Card1 link_url='#' text='SUMMER VIBES' />
+        <Card1 link_url='#' text='SUMMER VIBES' />
         <Card3
           text_wrapper='relative text-center -top-16'
           text_bg='bg-pink'
         />
-        <Card1
-          article_base='bg-gold flex flex-wrap mb-4 max-w-xl'
-          div_img_wrapper='w-11/12'
-          link_url='#'
-          inner_default='w-11/12'
-          text_size='text-2xl'
-          text='SUMMER VIBES'
-        />
-        <Card2
-          article_base='w-full relative mb-4 max-w-xl'
-          text_wrapper='absolute bottom-40 w-full flex flex-wrap justify-center'
-          text_title='NEW COLLECTION ARRIVED'
-          text_bg='bg-pink'
-          text_color='text-gray-100'
-          text_font='font-Roboto'
-          text_default='py-2 px-2 font-bold text-2xl tracking-wider'
-        />
-        {/* <Card3
-          article_base='w-full relative mb-4'
-          text_wrapper='absolute bottom-2 w-full flex flex-wrap justify-center'
-          text_title='NEW STUFF'
-          text_border='border-4 border-pink'
-          text_color='text-gray-50'
-          text_font='font-Roboto'
-          text_default='py-2 px-2 font-bold text-2xl tracking-wider'
-        /> */}
+        <Card1 link_url='#' text='SUMMER VIBES' />
+        <Card2 text_title='NEW COLLECTION ARRIVED' />
+        <Card3 text_title='NEW STUFF' />
         <div className='grid grid-cols-2 gap-x-2'>
           <CardProduct2
             text_title='PRODUCT TITLE'
             text_price='22 €'
             text_category='SHOES'
             text_size='text-base'
-            img_src='/f1.jpg'
           />
           <CardProduct2
             text_title='PRODUCT TITLE'
             text_price='22 €'
             text_category='SHOES'
             text_size='text-base'
-            img_src='/f2.jpg'
           />
         </div>
-        <CardProduct box_style='bg-gold w-full mb-4' />
+        <CardProduct
+          text_price='22 €'
+          text_category='SHOES'
+        />
         <CardProduct2
           text_title='PRODUCT TITLE'
           text_price='22 €'
           text_category='SHOES'
           text_size='text-lg'
-        />
+        />{" "}
         {/* <CardVideo /> */}
-      </div>
-      <div className='row-start-3 sm:col-start-1 sm:col-end-2 md:col-start-2 md:col-end-6 xl:col-start-2 xl:col-span-8 h-96 bg-gray-100'>
+        {/* </div> */}
+      </Main>
+      <Footer classes='footer_default'>
         <div>FOOTER</div>
-      </div>
+      </Footer>
     </MainWrapperDiv>
   );
 }

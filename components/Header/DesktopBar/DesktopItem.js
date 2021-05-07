@@ -18,11 +18,11 @@ export const DesktopItem = ({url = "#", title}) => {
           <p className='m-auto'>{title}</p>
         </section>
       </Link>
-      <div className='absolute bottom-0 bg-50 w-screen h-1/2'>
+      {/* <div className='absolute bottom-0 bg-50 w-screen h-1/2'>
         <ul className=''>
           <li>test</li>
         </ul>
-      </div>
+      </div> */}
     </>
   );
 };
