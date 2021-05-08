@@ -25,7 +25,7 @@ module.exports = {
         xl: "50px 1fr 50px",
         md: "repeat(6,1fr)",
         sm: "10px 1fr 10px",
-        cont: "repeat(auto-fill,minmax(300px,1fr))",
+        cont: "repeat(auto-fit,minmax(300px,1fr))",
         aside: "10px 1fr 10px",
       },
       backgroundImage: (theme) => ({

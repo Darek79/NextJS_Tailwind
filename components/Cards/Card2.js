@@ -19,8 +19,8 @@ export const Card2 = ({
         <Image
           alt='Picture of the author'
           layout='responsive'
-          width={400}
-          height={600}
+          width={300}
+          height={450}
           src='/f4.webp'
         />
         <div className='card2_text_wrapper'>

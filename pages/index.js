@@ -6,6 +6,7 @@ import Header from "../components/Elements/GridItem";
 import Main from "../components/Elements/GridItem";
 import Footer from "../components/Elements/GridItem";
 import Card1 from "./../components/Cards/Card1";
+import ItemSplitter from "../components/Elements/GridItem";
 import {Card2} from "./../components/Cards/Card2";
 import {Card3} from "./../components/Cards/Card3";
 import {CardProduct} from "./../components/Cards/CardProduct";
@@ -38,17 +39,31 @@ export default function Home() {
         <HeaderMain />
       </Header>
       <Main classes='main_default_style'>
-        {/* <CardVideo video_default='w-full mb-4' /> */}
-        <Card1 link_url='#' text='SUMMER VIBES' />
-        <Card1 link_url='#' text='SUMMER VIBES' />
+        <CardVideo video_default='w-full mb-4' />
+        <ItemSplitter classes='grid_item_splitter_default4'>
+          <Card1 link_url='#' text='SUMMER VIBES' />
+          <Card1 link_url='#' text='SUMMER VIBES' />
+          <Card1 link_url='#' text='SUMMER VIBES' />
+          <Card1 link_url='#' text='SUMMER VIBES' />
+        </ItemSplitter>
         <Card3
           text_wrapper='relative text-center -top-16'
           text_bg='bg-pink'
         />
-        <Card1 link_url='#' text='SUMMER VIBES' />
+        <ItemSplitter classes='grid_item_splitter_default4'>
+          <Card1 link_url='#' text='SUMMER VIBES' />
+          <Card1 link_url='#' text='SUMMER VIBES' />
+          <Card1 link_url='#' text='SUMMER VIBES' />
+          <Card1 link_url='#' text='SUMMER VIBES' />
+        </ItemSplitter>
+        <ItemSplitter classes='grid_item_splitter_default2'>
+          <Card2 text_title='NEW COLLECTION ARRIVED' />
+          <Card2 text_title='NEW COLLECTION ARRIVED' />
+        </ItemSplitter>
         <Card2 text_title='NEW COLLECTION ARRIVED' />
         <Card3 text_title='NEW STUFF' />
-        {/* <div className='grid grid-cols-cont gap-x-2'>
+        <ItemSplitter classes='grid_item_splitter_default4'>
+          {/* <div className='grid xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-x-2'> */}
           <CardProduct2
             text_title='PRODUCT TITLE'
             text_price='22 €'
@@ -73,7 +88,8 @@ export default function Home() {
             text_category='SHOES'
             text_size='text-base'
           />
-        </div> */}
+          {/* </div> */}
+        </ItemSplitter>
         <CardProduct
           text_price='22 €'
           text_category='SHOES'

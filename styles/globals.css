@@ -45,7 +45,7 @@
 /* -------------------------------------------------------------------------- */
 
 .card1_default {
-  @apply bg-gold flex flex-wrap mb-4 max-w-xl;
+  @apply bg-gold flex flex-wrap mb-4 w-full max-w-xl;
 }
 .card1_div_img_wrapper_default {
   @apply w-11/12;
@@ -205,6 +205,20 @@
 
 .li_normal {
   @apply text-gray-500 hover:text-gray-900;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             GRID ITEM SPLITTER                             */
+/* -------------------------------------------------------------------------- */
+
+.grid_item_splitter_default4 {
+  @apply grid xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-x-2;
+}
+.grid_item_splitter_default2 {
+  @apply grid xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-x-2;
+}
+.grid_item_splitter_rows2 {
+  @apply grid xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xl:grid-rows-2 md:grid-rows-2 sm:grid-rows-1 gap-x-2;
 }
 
 @import "tailwindcss/utilities";
