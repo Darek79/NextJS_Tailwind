@@ -19,7 +19,7 @@ export const HeaderMain = () => {
     setStatusAside((p) => !p);
   }
   return (
-    <header className='flex h-14 w-full justify-center'>
+    <header className='header_default'>
       {isVisible ? (
         <Aside
           openAside={openAside}

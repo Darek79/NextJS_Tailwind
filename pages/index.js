@@ -48,7 +48,7 @@ export default function Home() {
         <Card1 link_url='#' text='SUMMER VIBES' />
         <Card2 text_title='NEW COLLECTION ARRIVED' />
         <Card3 text_title='NEW STUFF' />
-        <div className='grid grid-cols-2 gap-x-2'>
+        {/* <div className='grid grid-cols-cont gap-x-2'>
           <CardProduct2
             text_title='PRODUCT TITLE'
             text_price='22 €'
@@ -61,7 +61,19 @@ export default function Home() {
             text_category='SHOES'
             text_size='text-base'
           />
-        </div>
+          <CardProduct2
+            text_title='PRODUCT TITLE'
+            text_price='22 €'
+            text_category='SHOES'
+            text_size='text-base'
+          />
+          <CardProduct2
+            text_title='PRODUCT TITLE'
+            text_price='22 €'
+            text_category='SHOES'
+            text_size='text-base'
+          />
+        </div> */}
         <CardProduct
           text_price='22 €'
           text_category='SHOES'

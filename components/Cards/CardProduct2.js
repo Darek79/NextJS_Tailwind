@@ -15,8 +15,8 @@ export const CardProduct2 = ({
           <Image
             alt='Picture of the author'
             layout='responsive'
-            width={400}
-            height={650}
+            width={300}
+            height={450}
             src='/f2.webp'
           />
         </div>

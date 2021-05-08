@@ -1,28 +1,30 @@
 import Link from "next/link";
-import {useState} from "react";
+import {useState, useEffect, useRef} from "react";
+import {DesktopCategories} from "./DesktopCategories";
 export const DesktopItem = ({url = "#", title}) => {
   const [isOpen, setOpen] = useState(false);
-
   function showList() {
-    setOpen((p) => !p);
+    setOpen(true);
   }
   function hideList() {
-    setOpen((p) => !p);
+    setOpen(false);
   }
+
   return (
     <>
       <Link href={url}>
         <section
-          className='w-26 flex flex-col px-4 cursor-pointer relative'
-          onMouseEnter={showList}>
+          className='desktop_item_default'
+          onMouseEnter={showList}
+          onMouseLeave={hideList}>
           <p className='m-auto'>{title}</p>
+          <DesktopCategories
+            open={isOpen}
+            test={title}
+            closeWhenLeave={hideList}
+          />
         </section>
       </Link>
-      {/* <div className='absolute bottom-0 bg-50 w-screen h-1/2'>
-        <ul className=''>
-          <li>test</li>
-        </ul>
-      </div> */}
     </>
   );
 };

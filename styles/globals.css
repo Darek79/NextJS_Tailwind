@@ -1,14 +1,19 @@
 /* prettier-ignore */
 
 @import "tailwindcss/base";
+
 @import "tailwindcss/components";
+
+/* -------------------------------------------------------------------------- */
+/*                                GLOBAL STYLES                               */
+/* -------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------- */
 /*                                HEADER STYLE                                */
 /* -------------------------------------------------------------------------- */
 
 .header_default_div {
-  @apply justify-self-center row-start-1 col-start-2 col-end-3 sm:w-full md:w-11/12 xl:w-full h-auto mb-4 bg-gray-100;
+  @apply justify-self-center row-start-1 col-start-2 col-end-3 sm:w-full md:w-11/12 xl:w-full h-14 mb-4 bg-gray-100;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -25,6 +30,14 @@
 
 .footer_default {
   @apply row-start-3 sm:col-start-1 sm:col-end-2 md:col-start-2 md:col-end-6 xl:col-start-2 xl:col-span-8 h-96 bg-gray-100;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 HEADER MAIN                                */
+/* -------------------------------------------------------------------------- */
+
+.header_default {
+  @apply flex h-full w-full justify-center;
 }
 
 /* -------------------------------------------------------------------------- */
@@ -120,7 +133,7 @@
 /* -------------------------------------------------------------------------- */
 
 .cardProduct2_article_base {
-  @apply mb-4 bg-pink;
+  @apply mb-4 bg-pink max-w-sm;
 }
 .cardProduct2_inner_default {
   @apply w-11/12;
@@ -133,6 +146,65 @@
 }
 .cardProduct2_text_style {
   @apply text-gray-50;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                 DESKTOP BAR                                */
+/* -------------------------------------------------------------------------- */
+
+.desktop_bar_default {
+  @apply flex w-full;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                DESKTOP ITEM                                */
+/* -------------------------------------------------------------------------- */
+
+.desktop_item_default {
+  @apply w-28 flex flex-col px-4 cursor-pointer;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             DESKTOP CATEGORIES                             */
+/* -------------------------------------------------------------------------- */
+
+.desktop_categories_default {
+  @apply absolute left-0 top-14 bg-white w-full z-10 h-1/2;
+}
+
+.desktop_categories_isClosed {
+  @apply transform-gpu ease-out duration-300 transition-all z-ten opacity-0;
+}
+
+.desktop_categories_isOpen {
+  @apply transform-gpu translate-y-0 ease-in duration-300 transition-all opacity-100;
+}
+
+.list_isClosed {
+  @apply transform-gpu ease-out duration-300 transition-all opacity-0;
+}
+.list_isOpen {
+  @apply flex h-full transform-gpu translate-y-0 ease-in duration-300 transition-all opacity-100;
+}
+
+.list_wrapper {
+  @apply flex justify-center w-3/4 h-4/6 m-auto;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  LIST ITEM                                 */
+/* -------------------------------------------------------------------------- */
+
+.ul_default {
+  @apply flex-grow tracking-wider leading-normal;
+}
+
+.li_title {
+  @apply text-xl;
+}
+
+.li_normal {
+  @apply text-gray-500 hover:text-gray-900;
 }
 
 @import "tailwindcss/utilities";
