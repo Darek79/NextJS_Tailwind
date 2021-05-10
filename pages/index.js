@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
+import axios from "axios";
 import {MainWrapperDiv} from "./../components/MainResponsive/MainWrapperBox";
 import {HeaderMain} from "./../components/Header/HeaderMain";
 import Header from "../components/Elements/GridItem";
@@ -13,7 +14,7 @@ import {CardProduct} from "./../components/Cards/CardProduct";
 import {CardProduct2} from "./../components/Cards/CardProduct2";
 import {CardVideo} from "../components/Cards/CardVideo";
 
-export default function Home() {
+export default function Home({data}) {
   return (
     <MainWrapperDiv>
       <Head>
@@ -35,6 +36,7 @@ export default function Home() {
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
+      {console.log(data)}
       <Header classes='header_default_div'>
         <HeaderMain />
       </Header>
@@ -60,10 +62,8 @@ export default function Home() {
           <Card2 text_title='NEW COLLECTION ARRIVED' />
           <Card2 text_title='NEW COLLECTION ARRIVED' />
         </ItemSplitter>
-        <Card2 text_title='NEW COLLECTION ARRIVED' />
         <Card3 text_title='NEW STUFF' />
         <ItemSplitter classes='grid_item_splitter_default4'>
-          {/* <div className='grid xl:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-x-2'> */}
           <CardProduct2
             text_title='PRODUCT TITLE'
             text_price='22 €'
@@ -88,24 +88,29 @@ export default function Home() {
             text_category='SHOES'
             text_size='text-base'
           />
-          {/* </div> */}
         </ItemSplitter>
-        <CardProduct
-          text_price='22 €'
-          text_category='SHOES'
-        />
-        <CardProduct2
-          text_title='PRODUCT TITLE'
-          text_price='22 €'
-          text_category='SHOES'
-          text_size='text-lg'
-        />{" "}
-        {/* <CardVideo /> */}
-        {/* </div> */}
       </Main>
       <Footer classes='footer_default'>
         <div>FOOTER</div>
       </Footer>
     </MainWrapperDiv>
   );
+}
+
+export async function getStaticProps() {
+  const {data} = await axios.get(
+    "https://jsonplaceholder.typicode.com/posts/1"
+  );
+
+  if (!data) {
+    return {
+      redirect: {
+        destination: "/",
+      },
+    };
+  }
+
+  return {
+    props: {data},
+  };
 }

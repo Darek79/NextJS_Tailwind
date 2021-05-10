@@ -19,6 +19,7 @@ module.exports = {
       },
       gridTemplateRows: {
         layout: "auto 1fr auto",
+        splitter: "24rem",
       },
       gridTemplateColumns: {
         default: "auto 1fr auto",
@@ -52,6 +53,7 @@ module.exports = {
       spacing: {
         lg: "32rem",
         xl: "36rem",
+        row:'40rem'
       },
       zIndex: {
         ten: "-10",

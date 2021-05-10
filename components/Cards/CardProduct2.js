@@ -10,14 +10,14 @@ export const CardProduct2 = ({
 }) => {
   return (
     <Link href={link_url}>
-      <article className='cardProduct2_article_base'>
-        <div className='cardProduct2_inner_default'>
+      <article className='cardProduct2_article_base click_class'>
+        <div className='cardProduct2_inner_default hover_class'>
           <Image
             alt='Picture of the author'
             layout='responsive'
             width={300}
             height={450}
-            src='/f2.webp'
+            src='/f6.webp'
           />
         </div>
         <div className='cardProduct2_text_wrapper'>

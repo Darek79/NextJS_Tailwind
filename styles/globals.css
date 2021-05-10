@@ -45,7 +45,7 @@
 /* -------------------------------------------------------------------------- */
 
 .card1_default {
-  @apply bg-gold flex flex-wrap mb-4 w-full max-w-xl;
+  @apply bg-gold flex flex-wrap mb-4 w-full max-w-xl overflow-hidden;
 }
 .card1_div_img_wrapper_default {
   @apply w-11/12;
@@ -67,7 +67,7 @@
 /*                                CARD2 STYLING                               */
 /* -------------------------------------------------------------------------- */
 .card2_article_base {
-  @apply w-full relative mb-4 max-w-xl;
+  @apply w-full relative mb-4 max-w-3xl overflow-hidden;
 }
 .card2_text_wrapper {
   @apply absolute bottom-40 w-full flex flex-wrap justify-center;
@@ -90,7 +90,7 @@
 /* -------------------------------------------------------------------------- */
 
 .card3_article_base {
-  @apply w-full relative mb-4;
+  @apply w-full relative mb-4 overflow-hidden;
 }
 .card3_text_wrapper {
   @apply absolute bottom-2 w-full flex flex-wrap justify-center;
@@ -133,7 +133,7 @@
 /* -------------------------------------------------------------------------- */
 
 .cardProduct2_article_base {
-  @apply mb-4 bg-pink max-w-sm;
+  @apply mb-4 bg-pink max-w-sm overflow-hidden;
 }
 .cardProduct2_inner_default {
   @apply w-11/12;
@@ -219,6 +219,13 @@
 }
 .grid_item_splitter_rows2 {
   @apply grid xl:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xl:grid-rows-2 md:grid-rows-2 sm:grid-rows-1 gap-x-2;
+}
+
+.hover_class {
+  @apply transform transition-all hover:scale-105;
+}
+.click_class {
+  @apply cursor-pointer;
 }
 
 @import "tailwindcss/utilities";

@@ -15,14 +15,16 @@ export const Card2 = ({
 }) => {
   return (
     <Link href={link_url}>
-      <article className='card2_article_base'>
-        <Image
-          alt='Picture of the author'
-          layout='responsive'
-          width={300}
-          height={450}
-          src='/f4.webp'
-        />
+      <article className='card2_article_base click_class'>
+        <div className='hover_class'>
+          <Image
+            alt='Picture of the author'
+            layout='responsive'
+            width={600}
+            height={600}
+            src='/f7.webp'
+          />
+        </div>
         <div className='card2_text_wrapper'>
           <span
             className='

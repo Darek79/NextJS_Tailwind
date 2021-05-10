@@ -10,8 +10,8 @@ const Card1 = ({
 }) => {
   return (
     <Link href={link_url}>
-      <article className='card1_default'>
-        <div className='card1_div_img_wrapper_default'>
+      <article className='card1_default click_class'>
+        <div className='card1_div_img_wrapper_default hover_class'>
           <Image
             alt='my test img'
             layout='responsive'
