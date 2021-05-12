@@ -90,7 +90,7 @@
 /* -------------------------------------------------------------------------- */
 
 .card3_article_base {
-  @apply w-full relative mb-4 overflow-hidden;
+  @apply w-full relative mb-4 overflow-hidden max-h-h75;
 }
 .card3_text_wrapper {
   @apply absolute bottom-2 w-full flex flex-wrap justify-center;
@@ -171,20 +171,20 @@
 .desktop_categories_default {
   @apply absolute left-0 top-14 bg-white w-full z-10 h-1/2;
 }
-
+/* translate-y-0 */
 .desktop_categories_isClosed {
   @apply transform-gpu ease-out duration-300 transition-all z-ten opacity-0;
 }
 
 .desktop_categories_isOpen {
-  @apply transform-gpu translate-y-0 ease-in duration-300 transition-all opacity-100;
+  @apply transform-gpu ease-in duration-300 transition-all opacity-100;
 }
 
 .list_isClosed {
-  @apply transform-gpu ease-out duration-300 transition-all opacity-0;
+  @apply transform-gpu ease-out duration-300 transition-all h-1/2 opacity-0;
 }
 .list_isOpen {
-  @apply flex h-full transform-gpu translate-y-0 ease-in duration-300 transition-all opacity-100;
+  @apply flex h-full transform-gpu ease-in duration-300 transition-all opacity-100;
 }
 
 .list_wrapper {

@@ -7,6 +7,10 @@ export const CardProduct2 = ({
   text_title,
   text_price,
   text_category,
+  priority = false,
+  // card_prod_default = "mb-4 max-w-sm overflow-hidden",
+  // click_behavior = "cursor-pointer",
+  // bg_color = "bg-red-200",
 }) => {
   return (
     <Link href={link_url}>
@@ -18,6 +22,7 @@ export const CardProduct2 = ({
             width={300}
             height={450}
             src='/f6.webp'
+            priority={priority}
           />
         </div>
         <div className='cardProduct2_text_wrapper'>

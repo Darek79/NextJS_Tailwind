@@ -11,8 +11,8 @@ export const CheckResize = (smallerThen) => {
 
   const resizeHandler = useCallback(async () => {
     const w = await promiseHandler();
+    console.log(w, "W");
     if (w < smallerThen) {
-      console.log(w);
       setMobile((p) => !p);
     } else {
       setMobile((p) => !p);
@@ -62,4 +62,21 @@ export const IsInViewport = ({
   }, []);
 
   return visible;
+};
+
+export const initWidth = (breakpoint) => {
+  console.log(typeof window);
+  if (window) {
+    return window.innerWidth > breakpoint;
+  }
+};
+export const IsMobile = () => {
+  var match = window.matchMedia || window.msMatchMedia;
+  if (match) {
+    var mq = match("(pointer:coarse)");
+    if (!mq.matches) {
+      return false;
+    }
+  }
+  return true;
 };

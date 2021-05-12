@@ -4,16 +4,9 @@ import {Button} from "./../Elements/Button";
 
 export const Card3 = ({
   link_url = "#",
-  article_base,
-  outer_default,
-  inner_default,
-  text_wrapper,
+
   text_title = "NEW STUFF",
-  text_bg,
-  text_border,
-  text_color = "text-gray-50",
-  text_font = "font-Roboto",
-  text_default = "py-2 px-2 font-bold text-2xl tracking-wider",
+  img_url = "/f10.webp",
 }) => {
   return (
     <Link href={link_url}>
@@ -22,9 +15,10 @@ export const Card3 = ({
           <Image
             alt='Picture of the author'
             layout='responsive'
+            priority={true}
             width={500}
             height={300}
-            src='/fg1.webp'
+            src={img_url}
           />
         </div>
         <div className='card3_text_wrapper'>

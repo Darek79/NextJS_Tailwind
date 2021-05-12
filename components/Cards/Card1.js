@@ -4,9 +4,10 @@ import {Button} from "./../Elements/Button";
 import PropTypes from "prop-types";
 
 const Card1 = ({
-  link_url = "#",
+  link_url = "/category/1",
   text = "SUMMER VIBES",
   img_url = "/f3.webp",
+  priority=false
 }) => {
   return (
     <Link href={link_url}>
@@ -18,6 +19,7 @@ const Card1 = ({
             width={500}
             height={600}
             src={img_url}
+            priority={priority}
           />
         </div>
         <div className='card1_text_wrapper_default'>

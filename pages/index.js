@@ -14,7 +14,7 @@ import {CardProduct} from "./../components/Cards/CardProduct";
 import {CardProduct2} from "./../components/Cards/CardProduct2";
 import {CardVideo} from "../components/Cards/CardVideo";
 
-export default function Home({data}) {
+export default function Home({top, mid, bottom}) {
   return (
     <MainWrapperDiv>
       <Head>
@@ -36,34 +36,155 @@ export default function Home({data}) {
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
-      {console.log(data)}
       <Header classes='header_default_div'>
         <HeaderMain />
       </Header>
       <Main classes='main_default_style'>
-        <CardVideo video_default='w-full mb-4' />
-        <ItemSplitter classes='grid_item_splitter_default4'>
-          <Card1 link_url='#' text='SUMMER VIBES' />
-          <Card1 link_url='#' text='SUMMER VIBES' />
-          <Card1 link_url='#' text='SUMMER VIBES' />
-          <Card1 link_url='#' text='SUMMER VIBES' />
-        </ItemSplitter>
+        {/* <CardVideo video_default='w-full mb-4' /> */}
         <Card3
           text_wrapper='relative text-center -top-16'
           text_bg='bg-pink'
+          img_url={"/fg1.webp"}
+        />
+
+        <ItemSplitter classes='grid_item_splitter_default4'>
+          {top &&
+            top.map((el) => (
+              <CardProduct2
+                key={el.title}
+                link_url='/category/women'
+                text_title={el.title.toUpperCase()}
+                text_price={el.price + "" + "$"}
+                text_category={el.category.toUpperCase()}
+                text_size='text-base'
+                priority={true}
+              />
+            ))}
+
+          {/* <CardProduct2
+            link_url='/category/men'
+            text_title='PRODUCT TITLE'
+            text_price='22 €'
+            text_category='SHOES'
+            text_size='text-base'
+            priority={true}
+          />
+          <CardProduct2
+            link_url='/category/men'
+            text_title='PRODUCT TITLE'
+            text_price='22 €'
+            text_category='SHOES'
+            text_size='text-base'
+            priority={true}
+          />
+          <CardProduct2
+            link_url='/category/men'
+            text_title='PRODUCT TITLE'
+            text_price='22 €'
+            text_category='SHOES'
+            text_size='text-base'
+            priority={true} />*/}
+        </ItemSplitter>
+        {/* <ItemSplitter classes='grid_item_splitter_default4'>
+          <Card1
+            link_url='/category/1'
+            text='SUMMER VIBES'
+            img_url={"/f4.webp"}
+          />
+          <Card1 link_url='#' text='SUMMER VIBES' />
+          <Card1 link_url='#' text='SUMMER VIBES' />
+          <Card1 link_url='#' text='SUMMER VIBES' />
+        </ItemSplitter> */}
+
+        <ItemSplitter classes='grid_item_splitter_default2'>
+          <Card2 text_title='NEW COLLECTION ARRIVED' />
+          <Card2 text_title='NEW COLLECTION ARRIVED' />
+        </ItemSplitter>
+        <ItemSplitter classes='grid_item_splitter_default4'>
+          {mid &&
+            mid.map((el) => (
+              <CardProduct2
+                key={el.title}
+                link_url='/category/women'
+                text_title={el.title.toUpperCase()}
+                text_price={el.price + "" + "$"}
+                text_category={el.category.toUpperCase()}
+                text_size='text-base'
+                priority={true}
+              />
+            ))}
+          {/* <CardProduct2
+            text_title='PRODUCT TITLE'
+            text_price='22 €'
+            text_category='SHOES'
+            text_size='text-base'
+          />
+          <CardProduct2
+            text_title='PRODUCT TITLE'
+            text_price='22 €'
+            text_category='SHOES'
+            text_size='text-base'
+          />
+          <CardProduct2
+            text_title='PRODUCT TITLE'
+            text_price='22 €'
+            text_category='SHOES'
+            text_size='text-base'
+          />
+          <CardProduct2
+            text_title='PRODUCT TITLE'
+            text_price='22 €'
+            text_category='SHOES'
+            text_size='text-base'
+          /> */}
+        </ItemSplitter>
+        <Card3
+          text_title='NEW STUFF'
+          img_url={"/f10.webp"}
         />
         <ItemSplitter classes='grid_item_splitter_default4'>
-          <Card1 link_url='#' text='SUMMER VIBES' />
-          <Card1 link_url='#' text='SUMMER VIBES' />
-          <Card1 link_url='#' text='SUMMER VIBES' />
-          <Card1 link_url='#' text='SUMMER VIBES' />
+          {bottom &&
+            bottom.map((el) => (
+              <CardProduct2
+                key={el.title}
+                link_url='/category/men'
+                text_title={el.title.toUpperCase()}
+                text_price={el.price + "" + "$"}
+                text_category={el.category.toUpperCase()}
+                text_size='text-base'
+                priority={true}
+              />
+            ))}
+          {/* <CardProduct2
+            text_title='PRODUCT TITLE'
+            text_price='22 €'
+            text_category='SHOES'
+            text_size='text-base'
+          />
+          <CardProduct2
+            text_title='PRODUCT TITLE'
+            text_price='22 €'
+            text_category='SHOES'
+            text_size='text-base'
+          />
+          <CardProduct2
+            text_title='PRODUCT TITLE'
+            text_price='22 €'
+            text_category='SHOES'
+            text_size='text-base'
+          />
+          <CardProduct2
+            text_title='PRODUCT TITLE'
+            text_price='22 €'
+            text_category='SHOES'
+            text_size='text-base'
+          /> */}
         </ItemSplitter>
         <ItemSplitter classes='grid_item_splitter_default2'>
           <Card2 text_title='NEW COLLECTION ARRIVED' />
           <Card2 text_title='NEW COLLECTION ARRIVED' />
         </ItemSplitter>
-        <Card3 text_title='NEW STUFF' />
-        <ItemSplitter classes='grid_item_splitter_default4'>
+        {/* <ItemSplitter classes='grid_item_splitter_default4'>
           <CardProduct2
             text_title='PRODUCT TITLE'
             text_price='22 €'
@@ -88,7 +209,7 @@ export default function Home({data}) {
             text_category='SHOES'
             text_size='text-base'
           />
-        </ItemSplitter>
+        </ItemSplitter> */}
       </Main>
       <Footer classes='footer_default'>
         <div>FOOTER</div>
@@ -96,11 +217,28 @@ export default function Home({data}) {
     </MainWrapperDiv>
   );
 }
-
-export async function getStaticProps() {
-  const {data} = await axios.get(
-    "https://jsonplaceholder.typicode.com/posts/1"
+async function myFetch() {
+  let files = [];
+  const women = await axios.get(
+    "https://fakestoreapi.com/products/category/women%27s%20clothing?limit=4"
   );
+  const men = await axios.get(
+    "https://fakestoreapi.com/products/category/men%27s%20clothing?limit=4"
+  );
+
+  files.push(women.data);
+  files.push(men.data);
+
+  return files;
+}
+export async function getStaticProps() {
+  let products = [];
+  // const {data} = await axios.get(
+  //   "https://fakestoreapi.com/products/category/w/categoryomen%27s%20clothing?limit=4"
+  // );
+  const data = await myFetch();
+  // /category"men's clothing",
+  // "w/categoryomen's clothing"
 
   if (!data) {
     return {
@@ -111,6 +249,10 @@ export async function getStaticProps() {
   }
 
   return {
-    props: {data},
+    props: {
+      top: data[0],
+      mid: data[0],
+      bottom: data[1],
+    },
   };
 }
